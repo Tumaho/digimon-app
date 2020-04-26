@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <% DB.forEach(val => { %>
+            
+            <div style="border: 2px solid blue;">
+                <form action="/details/<%= val.id %>" method="get">
+                    <h2> <%= val.name%></h2>
+                    <img src="<%= val.img %>">
+                    <p><%= val.level%></p>
+                    <input type="submit" value="view details">
+                </form>
+            </div>
+            <% }) %>
+
+
+    </section>
+</body>
+
+</html>
